@@ -1,0 +1,13 @@
+#!name= Github Pro
+#!desc= 解锁Github Pro功能(AI无解)
+#!author= 披袈裟点戒疤
+#!homepage = https://github.com/General74110/Loon
+#!icon = https://raw.githubusercontent.com/General74110/Quantumult-X/main/icon/Github.png
+
+
+
+[MITM]
+hostname = api.github.com
+
+[Script]
+Github = type=http-response,script-path=https://raw.githubusercontent.com/General74110/Quantumult-X/master/Script/UnlockVip%20/Github.js,pattern=^https:\/\/api\.github\.com\/graphql&,timeout=10,enable=true
