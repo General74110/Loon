@@ -1,0 +1,9 @@
+#!name= dompling-boxjs
+#!desc= 将cheavyleung的boxjsUI改为二丫的UI界面
+#!icon= https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1048.png
+
+[Rewrite]
+^https?://(boxjs\.com)/?$ https://dompling.github.io/boxjs.react/# 302
+
+[MITM]
+hostname = boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net
