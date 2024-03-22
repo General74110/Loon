@@ -1,5 +1,9 @@
-#!name=Amap
-#!desc=Amap
+#!name= 高德地图净化
+#!desc= 墨鱼自用高德地图去广告脚本
+ 特别提醒：如需转载请注明出处，谢谢合作！
+#!author= ddgksf2013
+#!homepage= https://github.com/ddgksf2013/ddgksf2013
+
 #!icon=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Telegram_X.png
 
 [Rewrite]
