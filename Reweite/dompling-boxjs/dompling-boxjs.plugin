@@ -7,6 +7,9 @@
 #!homepage= https://github.com/dompling/boxjs.react
 #!icon= https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1048.png
 
+[Rule]
+DOMAIN, dompling.github.io, PROXY
+
 [Rewrite]
 ^https?://(boxjs\.com)/?$ https://dompling.github.io/boxjs.react/# 302
 
