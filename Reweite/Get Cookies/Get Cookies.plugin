@@ -1,0 +1,18 @@
+#!name= Get Cookies
+#!desc= 用于获取Cookies(酷我音乐&QQ阅读)
+#!author= @General℡
+#!homepage= https://github.com/General74110/Loon
+#!date = 2024-4-20
+#!icon= https://raw.githubusercontent.com/black2c7/TheMagic-Icons/main/Icons/Shouhou.png
+
+
+[Script]
+http-request ^https:\/\/wapi\.kuwo\.cn\/openapi\/v1\/user\/freemium\/h5\/switches\? script-path=https://raw.githubusercontent.com/General74110/Quantumult-X/master/Task/Kuwomusic.js, requires-body=true, timeout=10, enabled=false, tag=酷我音乐刷时长获取Cookie, img-url=https://raw.githubusercontent.com/LovedGM/Quantumult-X-TuBiao/main/zishi-cs/zs23.png
+
+
+http-request ^https:\/\/eventv3\.reader\.qq\.com\/activity\/new\_welfare\/sign script-path=https://raw.githubusercontent.com/General74110/Quantumult-X/master/Task/QQreader.js, timeout=10, tag=QQ阅读获取Cookies, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/QQ.png
+
+
+
+[MITM]
+hostname = wapi.kuwo.cn, eventv3.reader.qq.com
