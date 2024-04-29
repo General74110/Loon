@@ -13,6 +13,10 @@ http-request ^https:\/\/wapi\.kuwo\.cn\/openapi\/v1\/user\/freemium\/h5\/switche
 http-request ^https:\/\/eventv3\.reader\.qq\.com\/activity\/new\_welfare\/sign script-path=https://raw.githubusercontent.com/General74110/Quantumult-X/master/Task/QQreader.js, timeout=10, enabled=true, tag=QQ阅读获取Cookies, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/QQ.png
 
 
+http-response ^https:\/\/mxsa\.mxbc\.net\/api\/v1\/customer\/info script-path=https://gist.githubusercontent.com/Sliverkiss/865c82e42a5730bb696f6700ebb94cee/raw/mxbc.js, requires-body=true, timeout=60, tag=蜜雪冰城获取token
+
+
+
 
 [MITM]
-hostname = wapi.kuwo.cn, eventv3.reader.qq.com
+hostname = wapi.kuwo.cn, eventv3.reader.qq.com, mxsa.mxbc.net
