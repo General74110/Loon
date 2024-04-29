@@ -1,13 +1,30 @@
-#!name=bilibili自动换区
-#!desc=哔哩哔哩, 港澳台番剧自动切换地区 & 显示豆瓣评分
-#!author=NobyDa
-#!homepage = https://github.com/NobyDa/Script/tree/master/Surge/JS
-#!icon = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/bilibili_3.png
+#!name= 哔哩哔哩(白图标外区版)
+#!desc= 港澳台番剧自动切换地区 & 显示豆瓣评分
+#!author= @NobyDa
+#!homepage= https://github.com/NobyDa
+#!date = 2023-08-14 16:47:00
+#!icon= https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/BiliBili.png
+
+[Rule]
+# 该规则集用于配合bilibili自动地区脚本使用。
+DOMAIN,api.biliapi.com
+DOMAIN,api.biliapi.net
+DOMAIN,api.bilibili.com
+DOMAIN,app.biliapi.com
+DOMAIN,app.biliapi.net
+DOMAIN,app.bilibili.com
+DOMAIN,grpc.biliapi.net
+DOMAIN,m.bilibili.com
+DOMAIN,upos-hz-mirrorakam.akamaized.net
+DOMAIN,www.bilibili.com
+DOMAIN-KEYWORD,cn-hk-eq-bcache-
+IP-CIDR,121.11.192.0/24,no-resolve
+[Rewrite]
+ip-cidr, 203.107.1.1/24, REJECT
+
+[Script]
+http-request ^https:\/\/ap(p|i)\.bili(bili|api)\.(com|net)\/x\/v\d\/search(\/type)?\?.+?%20(%E6%B8%AF|%E5%8F%B0|%E4%B8%AD)& script-path=https://raw.githubusercontent.com/General74110/Quantumult-X/master/Script/Bilibili/Bili_Auto_Regions.js, timeout=60, tag=Bili_Auto_Regions
 
 
 [MITM]
-hostname = %APPEND% ap?.bilibili.com, ap?.biliapi.net
-
-[Script]
-bilibili搜索 = type=http-request,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Bili_Auto_Regions.js,pattern=^https:\/\/ap(p|i)\.bili(bili|api)\.(com|net)\/x\/v\d\/search(\/type)?\?.+?%20(%E6%B8%AF|%E5%8F%B0|%E4%B8%AD)&,timeout=10,enable=true
-bilibili自动换区 = type=http-response,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Bili_Auto_Regions.js,pattern=https:\/\/ap(p|i)\.bili(bili|api)\.(com|net)\/(pgc\/view\/v\d\/app\/season|x\/v\d\/search\/defaultwords)\?access_key,max-size=0,requires-body=true,timeout=10,enable=true
+hostname = ap?.bili*i.com, ap?.bili*i.net
