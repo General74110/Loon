@@ -16,7 +16,8 @@ http-request ^https:\/\/eventv3\.reader\.qq\.com\/activity\/new\_welfare\/sign s
 http-response ^https:\/\/mxsa\.mxbc\.net\/api\/v1\/customer\/info script-path=https://gist.githubusercontent.com/Sliverkiss/865c82e42a5730bb696f6700ebb94cee/raw/mxbc.js, requires-body=true, timeout=60, tag=蜜雪冰城获取token
 
 
+http-request https:\/\/m\.client\.10010\.com\/(.*)\/smartwisdomCommon tag=联通 headers, script-path=https://raw.githubusercontent.com/General74110/Quantumult-X/master/Script/10010/10010.js
 
 
 [MITM]
-hostname = wapi.kuwo.cn, eventv3.reader.qq.com, mxsa.mxbc.net
+hostname = wapi.kuwo.cn, eventv3.reader.qq.com, mxsa.mxbc.net, m.client.10010.com
