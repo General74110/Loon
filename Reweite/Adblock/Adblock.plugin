@@ -17,7 +17,7 @@ http-response ^https:\/\/(ocean\.shuqireader\.com\/api|huichuan\.sm\.cn)(\/ad\/a
 http-response ^http:\/\/(rich|wapi)\.kuwo\.cn\/(AdService\/kaiping\/getcache|openapi\/v1\/album\/adBar\/getTsAdConfig)\? script-path=https://raw.githubusercontent.com/General74110/Quantumult-X/master/Script/Adblock/KuwoAd.js, requires-body=true, timeout=60, tag=酷我音乐开屏, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/KKTV.png
 
 #安心记加班去除开屏
-http-response ^https?:\/\/jjbapi\.julanling\.com\/advertConfig\/queryCutOverScreenConfig\? script-path= https://raw.githubusercontent.com/General74110/Quantumult-X/master/Script/Adblock/AnxinjiAd.js, requires-body=true, timeout=60, tag=安心记加班, img-url=https://raw.githubusercontent.com/black2c7/TheMagic-Icons/main/Icons/Alink.png
+http-response ^https^https?:\/\/jjbapi\.julanling\.com(\/advertConfig\/queryCutOverScreenConfig|splash_screen\/jjb_splash_screen_v3)\? script-path= https://raw.githubusercontent.com/General74110/Quantumult-X/master/Script/Adblock/AnxinjiAd.js, requires-body=true, timeout=60, tag=安心记加班, img-url=https://raw.githubusercontent.com/black2c7/TheMagic-Icons/main/Icons/Alink.png
 
 [MITM]
 hostname = us.l.qq.com, commontgw.reader.qq.com, ocean.shuqireader.com, huichuan.sm.cn, rich.kuwo.cn, wapi.kuwo.cn, jjbapi.julanling.com
