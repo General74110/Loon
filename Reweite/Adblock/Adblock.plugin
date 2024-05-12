@@ -1,5 +1,5 @@
 #!name= Adblock(自己写的去广告)
-#!desc= QQ阅读开屏广告和 我的-页面活动(⚠️需卸载重装!!!)++书旗小说去广告&酷我音乐AD
+#!desc= QQ阅读开屏广告和 我的-页面活动(⚠️需卸载重装!!!)++书旗小说去广告&酷我音乐AD&安心记加班开屏
 #!author= General℡
 #!homepage = https://github.com/General74110/Loon
 #!icon = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Advertising.png
@@ -13,6 +13,8 @@ http-response ^https?:\/\/(us\.l\.qq\.com\/exapp|commontgw\.reader\.qq\.com\/com
 http-response ^https:\/\/(ocean\.shuqireader\.com\/api|huichuan\.sm\.cn)(\/ad\/adserver\/v1\/api\/getAdInfo|\/route\/month\/commodityInfo|\/route\/iosReadPage\/adV2|\/route\/ios\/readPage|\/iosReadPage\/adTurnChapter|\/jbookmark\/api\/shuqiios\/act|\/nativead) script-path=https://raw.githubusercontent.com/General74110/Quantumult-X/master/Script/Adblock/sqreader.js, requires-body=true, timeout=60, tag=sqreader
 # 酷我音乐AD
 http-response ^http:\/\/(rich|wapi)\.kuwo\.cn\/(AdService\/kaiping\/getcache|openapi\/v1\/album\/adBar\/getTsAdConfig)\? script-path=https://raw.githubusercontent.com/General74110/Quantumult-X/master/Script/Adblock/KuwoAd.js, requires-body=true, timeout=60, tag=KuwoAd
+#安心记加班去除开屏
+^https:\/\/jjbapi\.julanling\.com\/advertConfig\/queryCutOverScreenConfig\? url script-response-body https://raw.githubusercontent.com/General74110/Quantumult-X/master/Script/Adblock/AnxinjiAd.js
 
 [MITM]
-hostname = us.l.qq.com, commontgw.reader.qq.com, ocean.shuqireader.com, huichuan.sm.cn, rich.kuwo.cn, wapi.kuwo.cn
+hostname = us.l.qq.com, commontgw.reader.qq.com, ocean.shuqireader.com, huichuan.sm.cn, rich.kuwo.cn, wapi.kuwo.cn, jjbapi.julanling.com
