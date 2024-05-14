@@ -11,7 +11,7 @@
 DOMAIN, dompling.github.io, PROXY
 
 [Rewrite]
-^https?://(boxjs\.com)/?$ https://dompling.github.io/boxjs.react/# 302
+^https?:\/\/boxjs\.com\/?$ https://dompling.github.io/boxjs.react/# 302
 
 [MITM]
 hostname = boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net
