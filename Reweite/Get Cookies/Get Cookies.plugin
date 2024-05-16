@@ -13,11 +13,13 @@ http-request ^https:\/\/wapi\.kuwo\.cn\/openapi\/v1\/user\/freemium\/h5\/switche
 http-request ^https:\/\/eventv3\.reader\.qq\.com\/activity\/new\_welfare\/sign script-path=https://raw.githubusercontent.com/General74110/Quantumult-X/master/Task/QQreader.js, timeout=10, enabled=true, tag=QQ阅读获取Cookies, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/QQ.png
 
 
-http-response ^https:\/\/mxsa\.mxbc\.net\/api\/v1\/customer\/info script-path=https://gist.githubusercontent.com/Sliverkiss/865c82e42a5730bb696f6700ebb94cee/raw/mxbc.js, requires-body=true, timeout=60, tag=蜜雪冰城获取token, img-url=https://raw.githubusercontent.com/black2c7/TheMagic-Icons/main/Icons/Cream2.png
+http-response ^https:\/\/(webapi|webapi2)\.qmai\.cn\/web\/seller\/(oauth\/flash-sale-login|account\/login-minp) script-path=https://gist.githubusercontent.com/Sliverkiss/8b4f5487e0f28786c7dec9c7484dcd5e/raw/teaMilk.js, requires-body=true, timeout=60, tag=奶茶获取token, img-url=https://raw.githubusercontent.com/black2c7/TheMagic-Icons/main/Icons/Cream2.png
+
+http-request ^https:\/\/(webapi|webapi2|qmwebapi)\.qmai\.cn\/web\/(catering\/integral|cmk-center)\/sign\/(signIn|takePartInSign) script-path=https://gist.githubusercontent.com/Sliverkiss/8b4f5487e0f28786c7dec9c7484dcd5e/raw/teaMilk.js, requires-body=true, timeout=60, tag=奶茶获取token, img-url=https://raw.githubusercontent.com/black2c7/TheMagic-Icons/main/Icons/Cream2.png
 
 
 http-request https:\/\/m\.client\.10010\.com\/(.*)\/smartwisdomCommon tag=中国联通获取Cookie, script-path=https://raw.githubusercontent.com/General74110/Quantumult-X/master/Script/10010/10010.js, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Area.png
 
 
 [MITM]
-hostname = wapi.kuwo.cn, eventv3.reader.qq.com, mxsa.mxbc.net, m.client.10010.com
+hostname = wapi.kuwo.cn, eventv3.reader.qq.com, webapi2.qmai.cn,webapi.qmai.cn,qmwebapi.qmai.cn, m.client.10010.com
