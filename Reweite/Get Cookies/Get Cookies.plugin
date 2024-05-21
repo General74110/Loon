@@ -1,7 +1,7 @@
 #!name= Get Cookies
 #!desc= 用于获取Cookies(酷我音乐&QQ阅读&京东)
 #!author= @General℡
-#!openUrl = https://home.m.jd.com/myJd/newhome.action
+#!openUrl = https://bean.m.jd.com/bean/signIndex.action
 #!homepage= https://github.com/General74110/Loon
 #!date = 2024-4-20
 #!icon= https://raw.githubusercontent.com/black2c7/TheMagic-Icons/main/Icons/Shouhou.png
