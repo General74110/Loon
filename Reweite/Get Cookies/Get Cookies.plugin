@@ -1,5 +1,5 @@
 #!name= Get Cookies
-#!desc= 用于获取Cookies(酷我音乐&QQ阅读)
+#!desc= 用于获取Cookies(酷我音乐&QQ阅读&巴士论坛)
 #!author= @General℡
 #!homepage= https://github.com/General74110/Loon
 #!icon= https://raw.githubusercontent.com/black2c7/TheMagic-Icons/main/Icons/Shouhou.png
@@ -11,7 +11,6 @@ http-request ^https:\/\/wapi\.kuwo\.cn\/openapi\/v1\/user\/freemium\/h5\/switche
 
 http-request ^https:\/\/eventv3\.reader\.qq\.com\/activity\/new\_welfare\/(sign|receiveVideo) script-path=https://raw.githubusercontent.com/General74110/Quantumult-X/master/Task/QQreader.js, timeout=10, enabled=true, tag=QQ阅读获取Cookies, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/QQ.png
 
-
-
+http-request ^https?:\/\/www\.javbus\.com\/forum\/home.php\?mod=, script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/javbus.js, timeout=10, requires-body=0, enabled=true, tag=巴士论坛获取Cookie, img-url=https://raw.githubusercontent.com/Yuheng0101/X/main/Assets/bus.png
 [MITM]
-hostname = wapi.kuwo.cn, eventv3.reader.qq.com
+hostname = wapi.kuwo.cn, eventv3.reader.qq.com, www.javbus.com
